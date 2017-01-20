@@ -1,6 +1,7 @@
 const express =  require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+var port = process.env.PORT || 3000
 var app = express();
 app.use((req,res,next)=>{
 	var now = new Date().toString();
@@ -59,6 +60,6 @@ app.use((req,res,next)=>{
 	res.render('repair.hbs');
 	
 })
-app.listen(80,()=>{
-	console.log("Server is listening at port 3000")
+app.listen(port,()=>{
+	console.log("Server is listening at port ",port)
 })
