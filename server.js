@@ -55,11 +55,10 @@ app.get('/home',(req,res)=>{
 		
 	})
 })
-
-app.use((req,res,next)=>{
-	res.render('repair.hbs');
-	
+app.get('/project',(req,res)=>{
+	res.render('project.hbs')
 })
+
 app.listen(port,()=>{
 	console.log("Server is listening at port ",port)
 })
